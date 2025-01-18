@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    const element = document.getElementById('myDiv');
+    if (element) {
+      // Only modify the element if it exists
+      element.style.display = "block"; 
+    } else {
+      console.warn('Element not found!');
+    }
+
+    // Attempting to access a non-existent element with error handling
+    const nonExistentElement = document.getElementById('nonExistentElement');
+    if (!nonExistentElement) {
+      console.error('Element with id "nonExistentElement" not found!');
+    } 
+  </script>
+</body>
+</html>
